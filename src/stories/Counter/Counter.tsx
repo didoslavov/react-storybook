@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Button } from '../Button';
+import { Button } from '../Button/Button';
 
-type CounterProps = {
+export type CounterProps = {
     color?: string;
 };
 

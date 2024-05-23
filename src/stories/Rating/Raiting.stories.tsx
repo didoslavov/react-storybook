@@ -1,11 +1,14 @@
-import { ArgTypes } from '@storybook/react';
-import Raiting from './Raiting';
+import { Meta, StoryFn } from '@storybook/react';
+import Rating, { RatingProps } from './Raiting';
 
 export default {
     title: 'Example/Rating',
-    component: Raiting,
-};
+    component: Rating,
+    parameters: {
+        layout: 'centered',
+    },
+} as Meta;
 
-const Template = (args: ArgTypes) => <Raiting {...args} />;
+const Template: StoryFn<RatingProps> = (args) => <Rating {...args} />;
 
 export const FiveStars = Template.bind({});
