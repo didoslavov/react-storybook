@@ -8,7 +8,9 @@
 }
 
 .accordion-title {
-    dispaly: flex;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
     cursor: pointer;
     background-color: #129ca1;
     padding: 10px 5px;
@@ -32,7 +34,7 @@
 .accordion-content {
     overflow: hidden;
     background-color: azure;
-    transition: all eas-in 0.3s;
+    transition: all ease-in 0.3s;
 }
 
 .accordion-content.active {

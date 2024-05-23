@@ -1,6 +1,6 @@
 import './accordion.css';
 import classNames from 'classnames';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
 
 export type AccordionProps = {
@@ -22,6 +22,7 @@ const Accordion = ({ data }: AccordionProps) => {
 
 const AccordionItem = ({ title, content }: AccordionItemProps) => {
     const [isActive, setIsActive] = useState(false);
+    const contentRef = useRef<HTMLDivElement>(null);
 
     return (
         <div className={`${classNames('accordion-item', { active: isActive })}`}>
@@ -29,7 +30,12 @@ const AccordionItem = ({ title, content }: AccordionItemProps) => {
                 <div className="title">{title}</div>
                 <div className="icon">{isActive ? <BsChevronDown /> : <BsChevronUp />}</div>
             </div>
-            <div className={`${classNames('accordion-content', { active: isActive })}`}>{content}</div>
+            <div
+                ref={contentRef}
+                style={{ height: isActive ? contentRef.current?.scrollHeight : 0 }}
+                className={`${classNames('accordion-content', { active: isActive })}`}>
+                {content}
+            </div>
         </div>
     );
 };

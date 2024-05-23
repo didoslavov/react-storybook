@@ -1,10 +1,13 @@
-import { Meta, StoryFn } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 import Accordion, { AccordionProps } from './Accordion';
 
 export default {
     title: 'Example/Accordion',
     component: Accordion,
-} as Meta;
+    parameters: {
+        layout: 'centered',
+    },
+};
 
 const Template: StoryFn<AccordionProps> = (args) => <Accordion {...args} />;
 
