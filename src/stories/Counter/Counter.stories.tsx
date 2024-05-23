@@ -2,7 +2,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import Counter, { CounterProps } from './Counter';
 
 export default {
-    title: 'Example/Counter',
+    title: 'Components/Counter',
     component: Counter,
     parameters: {
         layout: 'centered',

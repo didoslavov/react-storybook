@@ -2,7 +2,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import Rating, { RatingProps } from './Raiting';
 
 export default {
-    title: 'Example/Rating',
+    title: 'Components/Rating',
     component: Rating,
     parameters: {
         layout: 'centered',

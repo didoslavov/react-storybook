@@ -2,7 +2,7 @@ import { StoryFn } from '@storybook/react';
 import Accordion, { AccordionProps } from './Accordion';
 
 export default {
-    title: 'Example/Accordion',
+    title: 'Components/Accordion',
     component: Accordion,
     parameters: {
         layout: 'centered',
