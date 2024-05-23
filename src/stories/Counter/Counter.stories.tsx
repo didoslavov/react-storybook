@@ -2,7 +2,7 @@ import { ArgTypes } from '@storybook/react';
 import Counter from './Counter';
 
 export default {
-    title: 'Counter',
+    title: 'Example/Counter',
     component: Counter,
 };
 
