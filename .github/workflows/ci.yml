@@ -25,3 +25,6 @@ jobs:
 
             - name: Install dependencies
               run: npm install
+
+            - name: Coverage
+              run: codecov/codecov-action@v2
