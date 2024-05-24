@@ -58,3 +58,11 @@ export const Warning: Story = {
         backgroundColor: 'red',
     },
 };
+
+export const Red: Story = {
+    args: {
+        primary: true,
+        label: 'Red Button',
+        backgroundColor: 'red',
+    },
+};
