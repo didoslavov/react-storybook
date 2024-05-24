@@ -17,6 +17,8 @@ jobs:
         steps:
             - name: Checkout repository
               uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
 
             - name: Set up Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v2
@@ -28,3 +30,8 @@ jobs:
 
             - name: Coverage
               uses: codecov/codecov-action@v4.0.1
+
+            - name: Publish to cromatic
+              uses: chromaui/action@v1
+              with:
+                  projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
